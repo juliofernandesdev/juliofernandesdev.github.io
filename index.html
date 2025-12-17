@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Júlio Augusto - Desenvolvedor Full Stack especializado em acessibilidade e inovação. Criador do AcessiMap.">
+    <meta name="keywords" content="Júlio Augusto, desenvolvedor, full stack, AcessiMap, portfolio, acessibilidade, React Native">
+    <meta name="author" content="Júlio Augusto Ribeiro Alves Fernandes">
+    <meta name="theme-color" content="#6366f1">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Júlio Augusto | Desenvolvedor Full Stack">
+    <meta property="og:description" content="Criando tecnologia que transforma vidas. Conheça meu trabalho e projetos.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/og-image.png">
+    
+    <title>Júlio Augusto | Desenvolvedor Full Stack & Criador do AcessiMap</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cursor personalizado desativado para performance -->
+    <!-- <div class="cursor"></div>
+    <div class="cursor-follower"></div> -->
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">JA</div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <a href="#" class="nav-logo">
+            <span class="logo-text">JA</span>
+        </a>
+        
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="#home" class="nav-link active">Início</a></li>
+            <li><a href="#about" class="nav-link">Sobre</a></li>
+            <li><a href="#projects" class="nav-link">Projetos</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#contact" class="nav-link">Contato</a></li>
+        </ul>
+
+        <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-bg">
+                <div class="gradient-orb orb-1"></div>
+                <div class="gradient-orb orb-2"></div>
+                <div class="gradient-orb orb-3"></div>
+                <div class="grid-overlay"></div>
+            </div>
+
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Disponível para projetos
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="title-line">Olá, eu sou</span>
+                    <span class="title-name">Júlio Augusto Ribeiro Alves Fernandes</span>
+                    <span class="title-role">
+                        <span class="role-text" id="typed-text"></span>
+                        <span class="cursor-blink">|</span>
+                    </span>
+                </h1>
+
+                <p class="hero-description">
+                    Transformando ideias em <span class="highlight">experiências digitais</span> que impactam vidas.
+                    Criador do <span class="highlight-accent">AcessiMap</span>
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>Ver Projetos</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <span>Fale Comigo</span>
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-count="3">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">Anos de Experiência</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="15">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">Projetos Completos</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-image-container">
+                    <div class="image-glow"></div>
+                    <div class="image-ring ring-1"></div>
+                    <div class="image-ring ring-2"></div>
+                    <div class="hero-avatar">
+                        <img src="assets/foto.jpeg" alt="Júlio Augusto" loading="lazy">
+                    </div>
+                    <div class="floating-icons">
+                        <div class="floating-icon icon-react"><i class="fab fa-react"></i></div>
+                        <div class="floating-icon icon-node"><i class="fab fa-node-js"></i></div>
+                        <div class="floating-icon icon-python"><i class="fab fa-python"></i></div>
+                        <div class="floating-icon icon-figma"><i class="fab fa-figma"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <span>Role para baixo</span>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Sobre Mim</span>
+                    <h2 class="section-title">Criando <span class="gradient-text">Impacto</span> através da Tecnologia</h2>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="about-intro">
+                            Sou um <strong>desenvolvedor apaixonado</strong> por criar soluções que fazem a diferença na vida das pessoas. 
+                            Minha missão é usar a tecnologia como ferramenta de <strong>inclusão e transformação social</strong>.
+                        </p>
+                        
+                        <div class="about-highlights">
+                            <div class="highlight-card">
+                                <div class="highlight-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <div class="highlight-content">
+                                    <h4>Paixão por Acessibilidade</h4>
+                                    <p>Acredito que a tecnologia deve ser para todos, sem exceção.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="highlight-card">
+                                <div class="highlight-icon">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <div class="highlight-content">
+                                    <h4>Inovação Constante</h4>
+                                    <p>Sempre buscando novas formas de resolver problemas complexos.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="highlight-card">
+                                <div class="highlight-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="highlight-content">
+                                    <h4>Foco no Usuário</h4>
+                                    <p>Cada linha de código é pensada para melhorar a experiência.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-cta">
+                            <a href="#contact" class="btn btn-primary">
+                                <span>Vamos Conversar</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="#" class="btn btn-ghost" download>
+                                <i class="fas fa-download"></i>
+                                <span>Download CV</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="about-visual">
+                        <div class="experience-cards">
+                            <div class="exp-card">
+                                <div class="exp-icon"><i class="fas fa-code"></i></div>
+                                <span class="exp-number">3+</span>
+                                <span class="exp-label">Anos Codando</span>
+                            </div>
+                            <div class="exp-card">
+                                <div class="exp-icon"><i class="fas fa-mobile-alt"></i></div>
+                                <span class="exp-number">10+</span>
+                                <span class="exp-label">Apps Criados</span>
+                            </div>
+                            <div class="exp-card">
+                                <div class="exp-icon"><i class="fas fa-trophy"></i></div>
+                                <span class="exp-number">3+</span>
+                                <span class="exp-label">Premiações</span>
+                            </div>
+                            <div class="exp-card">
+                                <div class="exp-icon"><i class="fas fa-coffee"></i></div>
+                                <span class="exp-number">∞</span>
+                                <span class="exp-label">Cafés Tomados</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Project - AcessiMap -->
+        <section class="featured-project" id="projects">
+            <div class="project-bg">
+                <div class="project-gradient"></div>
+            </div>
+            
+            <div class="container">
+                <div class="section-header light">
+                    <span class="section-tag">Projeto Principal</span>
+                    <div class="project-logo">
+                        <img src="../assets/logo.png" alt="AcessiMap" class="acessimap-logo">
+                    </div>
+                    <h2 class="section-title">AcessiMap</h2>
+                    <p class="section-subtitle">O maior aplicativo de acessibilidade do Brasil</p>
+                </div>
+
+                <div class="featured-content">
+                    <div class="featured-mockup">
+                        <div class="phone-frame">
+                            <div class="phone-screen">
+                                <div class="app-preview">
+                                    <div class="app-header">
+                                        <img src="../assets/logo.png" alt="AcessiMap" class="app-logo">
+                                        <span>AcessiMap</span>
+                                    </div>
+                                    <div class="app-map">
+                                        <div class="map-pins">
+                                            <div class="pin pin-1"><i class="fas fa-wheelchair"></i></div>
+                                            <div class="pin pin-2"><i class="fas fa-parking"></i></div>
+                                            <div class="pin pin-3"><i class="fas fa-blind"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="app-bottom-bar">
+                                        <div class="bar-item active"><i class="fas fa-home"></i></div>
+                                        <div class="bar-item"><i class="fas fa-search"></i></div>
+                                        <div class="bar-item"><i class="fas fa-plus-circle"></i></div>
+                                        <div class="bar-item"><i class="fas fa-robot"></i></div>
+                                        <div class="bar-item"><i class="fas fa-user"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="floating-features">
+                            <div class="feature-bubble bubble-1">
+                                <i class="fas fa-robot"></i>
+                                <span>Nyra IA</span>
+                            </div>
+                            <div class="feature-bubble bubble-2">
+                                <i class="fas fa-route"></i>
+                                <span>Rotas Acessíveis</span>
+                            </div>
+                            <div class="feature-bubble bubble-3">
+                                <i class="fas fa-users"></i>
+                                <span>Comunidade</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="featured-info">
+                        <div class="project-badges">
+                            <span class="badge"><i class="fab fa-react"></i> React Native</span>
+                            <span class="badge"><i class="fab fa-node-js"></i> Node.js</span>
+                            <span class="badge"><i class="fas fa-brain"></i> IA</span>
+                            <span class="badge"><i class="fas fa-map"></i> Maps API</span>
+                        </div>
+
+                        <p class="featured-description">
+                            O <strong>AcessiMap</strong> é mais do que um app — é um movimento por uma cidade mais inclusiva. 
+                            Com tecnologia de ponta e uma comunidade engajada, estamos mapeando a acessibilidade urbana 
+                            e transformando a vida de milhares de pessoas com deficiência.
+                        </p>
+
+                        <div class="project-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Mapeamento colaborativo de locais acessíveis</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Nyra: Assistente de IA especializada em acessibilidade</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Rotas otimizadas para cadeirantes e PCDs</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Sistema de gamificação e recompensas</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Modo de emergência com contatos de confiança</span>
+                            </div>
+                        </div>
+
+                        <div class="project-stats">
+                            <div class="project-stat">
+                                <span class="stat-value">50K+</span>
+                                <span class="stat-name">Downloads</span>
+                            </div>
+                            <div class="project-stat">
+                                <span class="stat-value">4.8</span>
+                                <span class="stat-name">Avaliação</span>
+                            </div>
+                            <div class="project-stat">
+                                <span class="stat-value">10K+</span>
+                                <span class="stat-name">Locais Mapeados</span>
+                            </div>
+                        </div>
+
+                        <div class="project-buttons">
+                            <a href="../index.html" class="btn btn-light">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Ver Site do Projeto</span>
+                            </a>
+                            <a href="#" class="btn btn-outline-light">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Other Projects -->
+        <section class="other-projects">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Mais Projetos</span>
+                    <h2 class="section-title">Outros <span class="gradient-text">Trabalhos</span></h2>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="card-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-store"></i>
+                            </div>
+                            <div class="card-overlay">
+                                <a href="#" class="overlay-btn"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="overlay-btn"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-tags">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                            </div>
+                            <h3 class="card-title">E-Commerce Platform</h3>
+                            <p class="card-description">Plataforma completa de e-commerce com dashboard administrativo e integração de pagamentos.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="card-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <div class="card-overlay">
+                                <a href="#" class="overlay-btn"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="overlay-btn"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-tags">
+                                <span>React Native</span>
+                                <span>Firebase</span>
+                            </div>
+                            <h3 class="card-title">Task Manager App</h3>
+                            <p class="card-description">Aplicativo de gestão de tarefas com sincronização em tempo real e notificações push.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="card-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="card-overlay">
+                                <a href="#" class="overlay-btn"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="overlay-btn"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-tags">
+                                <span>Python</span>
+                                <span>TensorFlow</span>
+                                <span>FastAPI</span>
+                            </div>
+                            <h3 class="card-title">Analytics Dashboard</h3>
+                            <p class="card-description">Dashboard de análise de dados com ML para previsões e insights automatizados.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills" id="skills">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Habilidades</span>
+                    <h2 class="section-title">Minhas <span class="gradient-text">Tecnologias</span></h2>
+                </div>
+
+                <div class="skills-content">
+                    <div class="skills-category">
+                        <h3 class="category-title">
+                            <i class="fas fa-code"></i>
+                            Frontend
+                        </h3>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fab fa-react"></i></div>
+                                <span>React / React Native</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fab fa-js-square"></i></div>
+                                <span>JavaScript / TypeScript</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                                <span>HTML5 / CSS3</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fab fa-vuejs"></i></div>
+                                <span>Vue.js</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fas fa-wind"></i></div>
+                                <span>Tailwind CSS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-category">
+                        <h3 class="category-title">
+                            <i class="fas fa-server"></i>
+                            Backend
+                        </h3>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fab fa-node-js"></i></div>
+                                <span>Node.js / Express</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fab fa-python"></i></div>
+                                <span>Python / FastAPI</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fas fa-database"></i></div>
+                                <span>MongoDB / PostgreSQL</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fas fa-fire"></i></div>
+                                <span>Firebase</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fas fa-key"></i></div>
+                                <span>REST APIs / GraphQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-category">
+                        <h3 class="category-title">
+                            <i class="fas fa-tools"></i>
+                            Ferramentas
+                        </h3>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                                <span>Git / GitHub</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fab fa-docker"></i></div>
+                                <span>Docker</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fab fa-figma"></i></div>
+                                <span>Figma / UI Design</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fab fa-aws"></i></div>
+                                <span>AWS / Vercel</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                                <span>OpenAI / Machine Learning</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-marquee">
+                    <div class="marquee-track">
+                        <div class="marquee-content">
+                            <span>React Native</span>
+                            <span>•</span>
+                            <span>TypeScript</span>
+                            <span>•</span>
+                            <span>Node.js</span>
+                            <span>•</span>
+                            <span>Python</span>
+                            <span>•</span>
+                            <span>MongoDB</span>
+                            <span>•</span>
+                            <span>Firebase</span>
+                            <span>•</span>
+                            <span>OpenAI</span>
+                            <span>•</span>
+                            <span>Expo</span>
+                            <span>•</span>
+                            <span>React Native</span>
+                            <span>•</span>
+                            <span>TypeScript</span>
+                            <span>•</span>
+                            <span>Node.js</span>
+                            <span>•</span>
+                            <span>Python</span>
+                            <span>•</span>
+                            <span>MongoDB</span>
+                            <span>•</span>
+                            <span>Firebase</span>
+                            <span>•</span>
+                            <span>OpenAI</span>
+                            <span>•</span>
+                            <span>Expo</span>
+                            <span>•</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Contato</span>
+                    <h2 class="section-title">Vamos <span class="gradient-text">Conversar?</span></h2>
+                    <p class="section-subtitle">Estou sempre aberto a novas oportunidades e parcerias</p>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-text">
+                                <span class="info-label">Email</span>
+                                <a href="mailto:julio@email.com" class="info-value">julio@email.com</a>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-text">
+                                <span class="info-label">Localização</span>
+                                <span class="info-value">Brasil</span>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required placeholder=" ">
+                            <label for="name">Seu Nome</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder=" ">
+                            <label for="email">Seu Email</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                            <label for="message">Sua Mensagem</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>Enviar Mensagem</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">JA</span>
+                    <p>Criando tecnologia que transforma vidas.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Início</a>
+                    <a href="#about">Sobre</a>
+                    <a href="#projects">Projetos</a>
+                    <a href="#contact">Contato</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Júlio Augusto. Todos os direitos reservados.</p>
+                <p class="made-with">Feito com <i class="fas fa-heart"></i> e muito ☕</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
