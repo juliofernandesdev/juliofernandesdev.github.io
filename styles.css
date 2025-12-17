@@ -1,11 +1,9 @@
 /* ========================================
    Júlio Augusto - Portfolio
-   Modern & Impressive Design
+   Modern Design
    ======================================== */
 
-/* ===== CSS Variables ===== */
 :root {
-    /* Primary Colors */
     --primary-50: #eef2ff;
     --primary-100: #e0e7ff;
     --primary-200: #c7d2fe;
@@ -17,14 +15,12 @@
     --primary-800: #3730a3;
     --primary-900: #312e81;
 
-    /* Accent Colors */
     --accent-cyan: #06b6d4;
     --accent-pink: #ec4899;
     --accent-purple: #a855f7;
     --accent-orange: #f97316;
     --accent-green: #10b981;
 
-    /* Neutral Colors */
     --gray-50: #f9fafb;
     --gray-100: #f3f4f6;
     --gray-200: #e5e7eb;
@@ -37,25 +33,21 @@
     --gray-900: #111827;
     --gray-950: #030712;
 
-    /* Text Colors */
     --text-primary: #0f172a;
     --text-secondary: #475569;
     --text-muted: #94a3b8;
     --text-light: #ffffff;
 
-    /* Background */
     --bg-primary: #ffffff;
     --bg-secondary: #f8fafc;
     --bg-dark: #0a0a0f;
     --bg-darker: #050507;
 
-    /* Gradients */
     --gradient-primary: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
     --gradient-secondary: linear-gradient(135deg, #06b6d4 0%, #6366f1 100%);
     --gradient-dark: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
     --gradient-glow: radial-gradient(circle at center, rgba(99, 102, 241, 0.3) 0%, transparent 70%);
 
-    /* Shadows */
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
@@ -64,22 +56,18 @@
     --shadow-glow: 0 0 60px rgba(99, 102, 241, 0.4);
     --shadow-glow-sm: 0 0 30px rgba(99, 102, 241, 0.3);
 
-    /* Transitions */
     --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
     --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
     --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    /* Typography */
     --font-display: 'Space Grotesk', sans-serif;
     --font-body: 'Inter', sans-serif;
 
-    /* Spacing */
     --container-max: 1200px;
     --section-spacing: 120px;
 }
 
-/* ===== Reset & Base ===== */
 *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -104,13 +92,6 @@ body {
     color: white;
 }
 
-/* ===== Custom Cursor (Disabled for performance) ===== */
-.cursor,
-.cursor-follower {
-    display: none;
-}
-
-/* ===== Loader ===== */
 .loader {
     position: fixed;
     top: 0;
@@ -172,7 +153,6 @@ body {
     50% { transform: scale(1.05); }
 }
 
-/* ===== Navigation ===== */
 .nav {
     position: fixed;
     top: 0;
@@ -301,7 +281,6 @@ body {
     }
 }
 
-/* ===== Hero Section ===== */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -757,7 +736,6 @@ body {
     }
 }
 
-/* ===== Container ===== */
 .container {
     width: 100%;
     max-width: var(--container-max);
@@ -765,7 +743,6 @@ body {
     padding: 0 2rem;
 }
 
-/* ===== Section Headers ===== */
 .section-header {
     text-align: center;
     margin-bottom: 4rem;
@@ -807,7 +784,6 @@ body {
     color: var(--gray-400);
 }
 
-/* AcessiMap Logo */
 .project-logo {
     margin-bottom: 1rem;
 }
@@ -825,7 +801,6 @@ body {
     object-fit: contain;
 }
 
-/* ===== About Section ===== */
 .about {
     padding: var(--section-spacing) 0;
     background: var(--bg-darker);
@@ -970,7 +945,6 @@ body {
     }
 }
 
-/* ===== Featured Project Section ===== */
 .featured-project {
     padding: var(--section-spacing) 0;
     position: relative;
@@ -1274,7 +1248,6 @@ body {
     }
 }
 
-/* ===== Other Projects ===== */
 .other-projects {
     padding: var(--section-spacing) 0;
     background: var(--bg-dark);
@@ -1391,7 +1364,6 @@ body {
     line-height: 1.6;
 }
 
-/* ===== Skills Section ===== */
 .skills {
     padding: var(--section-spacing) 0;
     background: var(--bg-darker);
@@ -1464,7 +1436,6 @@ body {
     font-weight: 500;
 }
 
-/* Skills Marquee */
 .skills-marquee {
     overflow: hidden;
     padding: 2rem 0;
@@ -1496,7 +1467,6 @@ body {
     to { transform: translateX(-50%); }
 }
 
-/* ===== Contact Section ===== */
 .contact {
     padding: var(--section-spacing) 0;
     background: var(--bg-dark);
@@ -1656,7 +1626,6 @@ body {
     }
 }
 
-/* ===== Footer ===== */
 .footer {
     padding: 3rem 0;
     background: var(--bg-darker);
@@ -1747,7 +1716,6 @@ body {
     }
 }
 
-/* ===== Animations ===== */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
         animation-duration: 0.01ms !important;
@@ -1756,7 +1724,6 @@ body {
     }
 }
 
-/* ===== Utilities ===== */
 .sr-only {
     position: absolute;
     width: 1px;
