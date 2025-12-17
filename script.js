@@ -2,7 +2,7 @@
    Júlio Augusto - Portfolio JavaScript
    ======================================== */
 
-// ===== Loader =====
+
 window.addEventListener('load', () => {
     const loader = document.getElementById('loader');
     setTimeout(() => {
@@ -10,16 +10,11 @@ window.addEventListener('load', () => {
     }, 2000);
 });
 
-// ===== Custom Cursor (Disabled for performance) =====
-// Cursor personalizado desativado para melhor performance
-
-// ===== Navigation =====
 const nav = document.getElementById('nav');
 const navToggle = document.getElementById('nav-toggle');
 const navMenu = document.getElementById('nav-menu');
 const navLinks = document.querySelectorAll('.nav-link');
 
-// Toggle mobile menu
 if (navToggle && navMenu) {
     navToggle.addEventListener('click', () => {
         navToggle.classList.toggle('active');
@@ -27,7 +22,6 @@ if (navToggle && navMenu) {
     });
 }
 
-// Close menu on link click
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         navToggle?.classList.remove('active');
@@ -35,7 +29,6 @@ navLinks.forEach(link => {
     });
 });
 
-// Navbar scroll effect with throttle
 let ticking = false;
 window.addEventListener('scroll', () => {
     if (!ticking) {
@@ -51,7 +44,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Active link on scroll (throttled)
 const sections = document.querySelectorAll('section[id]');
 
 function setActiveLink() {
@@ -81,7 +73,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// ===== Typing Effect =====
 const typedTextElement = document.getElementById('typed-text');
 const texts = [
     'Desenvolvedor Full Stack',
@@ -125,7 +116,6 @@ if (typedTextElement) {
     setTimeout(typeText, 1000);
 }
 
-// ===== Counter Animation =====
 const stats = document.querySelectorAll('.stat-number[data-count]');
 
 function animateCounter(el) {
@@ -147,7 +137,6 @@ function animateCounter(el) {
     updateCounter();
 }
 
-// Intersection Observer for counter animation
 const counterObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -159,7 +148,6 @@ const counterObserver = new IntersectionObserver((entries) => {
 
 stats.forEach(stat => counterObserver.observe(stat));
 
-// ===== Scroll Animations =====
 const animatedElements = document.querySelectorAll('.highlight-card, .exp-card, .project-card, .skill-item, .info-card');
 
 const scrollObserver = new IntersectionObserver((entries) => {
@@ -178,7 +166,6 @@ animatedElements.forEach(el => {
     scrollObserver.observe(el);
 });
 
-// ===== Contact Form =====
 const contactForm = document.getElementById('contact-form');
 
 if (contactForm) {
@@ -190,13 +177,11 @@ if (contactForm) {
         const email = formData.get('email');
         const message = formData.get('message');
 
-        // Simple validation
         if (!name || !email || !message) {
             alert('Por favor, preencha todos os campos.');
             return;
         }
 
-        // Simulate form submission
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const originalText = submitBtn.innerHTML;
         
@@ -217,7 +202,6 @@ if (contactForm) {
     });
 }
 
-// ===== Smooth Scroll =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -235,13 +219,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ===== Parallax Effect (Disabled for performance) =====
-// Parallax desativado para melhor performance
-
-// ===== Mouse Move Effect (Simplified) =====
-// Efeito 3D simplificado para melhor performance
-
-// ===== Skills Marquee Pause on Hover =====
 const marqueeTrack = document.querySelector('.marquee-track');
 
 if (marqueeTrack) {
@@ -254,7 +231,6 @@ if (marqueeTrack) {
     });
 }
 
-// ===== Lazy Loading Images =====
 const lazyImages = document.querySelectorAll('img[data-src]');
 
 const imageObserver = new IntersectionObserver((entries) => {
@@ -270,7 +246,6 @@ const imageObserver = new IntersectionObserver((entries) => {
 
 lazyImages.forEach(img => imageObserver.observe(img));
 
-// ===== Add stagger animation to skill items =====
 const skillCategories = document.querySelectorAll('.skills-category');
 
 skillCategories.forEach(category => {
@@ -280,14 +255,12 @@ skillCategories.forEach(category => {
     });
 });
 
-// ===== Experience cards hover effect =====
 const expCards = document.querySelectorAll('.exp-card');
 
 expCards.forEach((card, index) => {
     card.style.transitionDelay = `${index * 0.1}s`;
 });
 
-// ===== Console Easter Egg =====
 console.log('%c👋 Olá, desenvolvedor!', 'font-size: 24px; font-weight: bold; color: #6366f1;');
 console.log('%cInteressado no código? Entre em contato!', 'font-size: 14px; color: #94a3b8;');
 console.log('%c🚀 AcessiMap - Acessibilidade para Todos', 'font-size: 14px; color: #10b981;');
