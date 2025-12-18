@@ -76,7 +76,6 @@ window.addEventListener('scroll', () => {
 const typedTextElement = document.getElementById('typed-text');
 const texts = [
     'Desenvolvedor Full Stack',
-    'Arquiteto de Software',
     'Criador do AcessiMap',
     'Entusiasta de Acessibilidade',
     'Mobile Developer',
@@ -264,3 +263,4 @@ expCards.forEach((card, index) => {
 console.log('%c👋 Olá, desenvolvedor!', 'font-size: 24px; font-weight: bold; color: #6366f1;');
 console.log('%cInteressado no código? Entre em contato!', 'font-size: 14px; color: #94a3b8;');
 console.log('%c🚀 AcessiMap - Acessibilidade para Todos', 'font-size: 14px; color: #10b981;');
+
