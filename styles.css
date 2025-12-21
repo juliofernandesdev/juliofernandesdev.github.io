@@ -1,11 +1,9 @@
 /* ==========================================================================
-   🚀 ULTRA PREMIUM DESIGN SYSTEM
-   The Most Advanced Personal Website on the Internet
    HTML5 & CSS3 pushed to the absolute limit
    ========================================================================== */
 
 /* ==========================================================================
-   Custom Properties - Design Tokens Ultra Premium
+   Custom Properties - Design Tokens
    ========================================================================== */
 
 :root {
@@ -1610,3 +1608,4 @@ ul { list-style: none; }
     cursor: auto;
   }
 }
+
