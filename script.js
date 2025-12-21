@@ -1,6 +1,4 @@
 // ==========================================================================
-// 🚀 ULTRA PREMIUM JAVASCRIPT
-// The Most Interactive Personal Website on the Internet
 // Cutting-edge animations, interactions, and effects
 // ==========================================================================
 
@@ -603,3 +601,4 @@
   window.addEventListener('wheel', () => {}, { passive: true });
 
 })();
+
