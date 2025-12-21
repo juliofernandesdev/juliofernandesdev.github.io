@@ -3,23 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content="Construindo o que ainda não existe. Tecnologia com propósito, código com cuidado.">
-  <meta name="theme-color" content="#f8f9fa" media="(prefers-color-scheme: light)">
+  <meta name="description" content="Júlio Augusto - Construindo o que ainda não existe. Tecnologia com propósito, código com cuidado. O site pessoal mais tecnológico da internet.">
+  <meta name="keywords" content="Júlio Augusto, desenvolvedor, tecnologia, programação, acessibilidade, design, inovação">
+  <meta name="author" content="Júlio Augusto">
+  <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="color-scheme" content="light dark">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="JA - Tecnologia com Propósito">
+  <meta property="og:description" content="Construindo o que ainda não existe. Tecnologia com propósito, código com cuidado.">
+  <meta property="og:site_name" content="Júlio Augusto">
+  
   <title>JA - Tecnologia com Propósito</title>
   
   <!-- Preconnect for performance -->
-  <link rel="preconnect" href="https://vlibras.gov.br">
+  <link rel="preconnect" href="https://vlibras.gov.br" crossorigin>
+  <link rel="dns-prefetch" href="https://vlibras.gov.br">
   
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
   
+  <!-- Preload critical resources -->
+  <link rel="preload" href="assets/foto.jpeg" as="image">
+  
   <!-- VLIBRAS -->
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js" defer></script>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 </head>
 <body>
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
   <!-- Header -->
   <header class="header" role="banner">
     <div class="header-container">
@@ -286,13 +302,13 @@
   <footer class="footer" role="contentinfo">
     <div class="footer-container">
       <div class="footer-content">
-        <p class="copyright">© <span id="current-year"></span></p>
-        <p class="philosophy">Construído com intenção.</p>
+        <p class="copyright">© <span id="current-year"></span> Júlio Augusto</p>
+        <p class="philosophy">Construído com intenção e tecnologia de ponta.</p>
       </div>
     </div>
   </footer>
 
-  <!-- VLIBRAS Widget -->
+  <!-- VLIBRAS Widget - Acessibilidade -->
   <div vw class="enabled">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
@@ -300,10 +316,24 @@
     </div>
   </div>
 
+  <!-- Scripts -->
   <script src="script.js"></script>
   <script>
-    // Inicializar VLIBRAS
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
+    // Inicializar VLIBRAS quando estiver disponível
+    if (window.VLibras) {
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    } else {
+      document.addEventListener('DOMContentLoaded', function() {
+        var checkVLibras = setInterval(function() {
+          if (window.VLibras) {
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+            clearInterval(checkVLibras);
+          }
+        }, 100);
+        // Timeout after 10 seconds
+        setTimeout(function() { clearInterval(checkVLibras); }, 10000);
+      });
+    }
   </script>
 </body>
 </html>
