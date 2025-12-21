@@ -12,30 +12,50 @@ document.addEventListener('DOMContentLoaded', function() {
   // Mobile Menu Toggle
   const menuToggle = document.getElementById('menu-toggle');
   const mainNav = document.getElementById('main-navigation');
+  const navOverlay = document.getElementById('nav-overlay');
   const menuIcon = menuToggle?.querySelector('.menu-icon');
 
-  if (menuToggle && mainNav && menuIcon) {
+  function closeMenu() {
+    menuToggle?.setAttribute('aria-expanded', 'false');
+    menuToggle?.setAttribute('aria-label', 'Abrir menu');
+    mainNav?.classList.remove('open');
+    navOverlay?.classList.remove('active');
+    menuIcon?.classList.remove('open');
+    document.body.style.overflow = '';
+    navOverlay?.setAttribute('aria-hidden', 'true');
+  }
+
+  function openMenu() {
+    menuToggle?.setAttribute('aria-expanded', 'true');
+    menuToggle?.setAttribute('aria-label', 'Fechar menu');
+    mainNav?.classList.add('open');
+    navOverlay?.classList.add('active');
+    menuIcon?.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    navOverlay?.setAttribute('aria-hidden', 'false');
+  }
+
+  if (menuToggle && mainNav && menuIcon && navOverlay) {
     menuToggle.addEventListener('click', function() {
       const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
       
-      menuToggle.setAttribute('aria-expanded', !isOpen);
-      menuToggle.setAttribute('aria-label', isOpen ? 'Abrir menu' : 'Fechar menu');
-      mainNav.classList.toggle('open');
-      menuIcon.classList.toggle('open');
-      
-      // Prevenir scroll do body quando menu está aberto
-      document.body.style.overflow = !isOpen ? 'hidden' : '';
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    // Fechar menu ao clicar no overlay
+    navOverlay.addEventListener('click', function() {
+      closeMenu();
     });
 
     // Close menu when clicking on nav links
     const navLinks = mainNav.querySelectorAll('.nav-link');
     navLinks.forEach(function(link) {
       link.addEventListener('click', function() {
-        menuToggle.setAttribute('aria-expanded', 'false');
-        menuToggle.setAttribute('aria-label', 'Abrir menu');
-        mainNav.classList.remove('open');
-        menuIcon.classList.remove('open');
-        document.body.style.overflow = '';
+        closeMenu();
       });
     });
   }
@@ -141,16 +161,19 @@ document.addEventListener('DOMContentLoaded', function() {
   document.addEventListener('keydown', function(e) {
     // Close mobile menu with Escape key
     if (e.key === 'Escape') {
-      const menuToggle = document.getElementById('menu-toggle');
       const mainNav = document.getElementById('main-navigation');
+      const menuToggle = document.getElementById('menu-toggle');
+      const navOverlay = document.getElementById('nav-overlay');
       const menuIcon = menuToggle?.querySelector('.menu-icon');
       
       if (mainNav?.classList.contains('open')) {
         menuToggle?.setAttribute('aria-expanded', 'false');
         menuToggle?.setAttribute('aria-label', 'Abrir menu');
         mainNav.classList.remove('open');
+        navOverlay?.classList.remove('active');
         menuIcon?.classList.remove('open');
         document.body.style.overflow = '';
+        navOverlay?.setAttribute('aria-hidden', 'true');
         menuToggle?.focus();
       }
     }
